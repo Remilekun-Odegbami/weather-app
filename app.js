@@ -4,6 +4,7 @@ const cityName = document.querySelector('.city-name h3');
 const cardBody = document.querySelector('.card-body');
 const countryName = document.querySelector('.city-name p');
 const timeImage = document.querySelector('.card-top img');
+const cardInfo = document.querySelector('.back-card');
 
 const calCelcius = (kelvin) => {
     celcius = Math.round(kelvin - 273.15);
@@ -17,19 +18,6 @@ const dayTime = (icon) =>{
     } else {
         return false
     }
-}
-
-updateWeatherApp2 = (country) => {
-   //console.log(country)
-    countryName.textContent = country.name;
-    countryName.innerHTML =`
-   
-          <div class="city-name my-3">
-            <p> ${country.sys.country}</p>
-          </div>
-            
-    `
-
 }
 
 
@@ -91,10 +79,21 @@ updateWeatherApp = (city) => {
         
     }
 
+        cardInfo.classList.remove('d-none');
     
 }
 
 
+updateWeatherApp2 = (country) => {
+   //console.log(country)
+    countryName.textContent = country.name;
+    countryName.innerHTML =`
+   
+          <div class="city-name my-3">
+            <p> ${country.sys.country} </p>
+          </div>   `
+
+}
 
 
 //add an event listener to the form
@@ -104,7 +103,14 @@ searchForm.addEventListener('submit', (event) => {
     console.log(citySearched);
     searchForm.reset();
 
-
+    requestCity(citySearched)
+        .then((data) => {
+            updateWeatherApp(data);
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    
 
     requestCity(citySearched)
     .then((data) => {
@@ -114,14 +120,4 @@ searchForm.addEventListener('submit', (event) => {
         console.log(error)
     })
 
-
-    requestCity(citySearched)
-        .then((data) => {
-            updateWeatherApp(data);
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-
-    
 })
