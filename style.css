@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Sansita Swashed', cursive;
+  background: #f8f6ec;
+  color: #373a39;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 450px;
+  min-width: 450px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.form-rounded {
+  border-radius: 2em;
+}
+
+.back-card {
+  border-radius: 30px !important;
+}
+
+.city-name {
+  position: absolute;
+  width: 100%;
+}
+
+.city-name h3 {
+  font-size: 20px;
+  font-weight: 300;
+ 
+}
+
+.city-name p {
+  font-size: 35px;
+  font-weight: 400;
+ 
+}
+
+.city-name span {
+  font-size: 30px;
+  position: relative;
+  top: -25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.temp span {
+  font-weight: 100;
+  font-size: 4em;
+  white-space: nowrap;
+}
+
+.temp2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.high::before {
+  content: ' ';
+  background: url('img/up.svg') no-repeat;
+  width: 10px;
+  height: 15px;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.low::before {
+  content: ' ';
+  background: url('img/down.svg') no-repeat;
+  width: 10px;
+  height: 15px;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.icon-container {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: #4a4b5e;
+}
+
+.icon-container img {
+  margin: auto;
+}
+
+.card-bottom p {
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: -3px;
+}
+
+.desc span{
+  font-size: 20px;
+  letter-spacing:2px ;
+
+}
