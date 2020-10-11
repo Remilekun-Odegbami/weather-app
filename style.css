@@ -101,3 +101,25 @@ body {
   letter-spacing:2px ;
 
 }
+
+.protest1 {
+  letter-spacing: -2px ;
+  font-size:20px;
+  
+}
+
+.protest2{
+  letter-spacing: -2px ;
+  font-size:20px;
+  position: relative;
+  left:150px;
+  top: -30px
+} 
+
+.protest3{
+  letter-spacing: -2px ;
+  font-size:20px;
+  position: relative;
+  left:240px;
+  top: -60px
+}
